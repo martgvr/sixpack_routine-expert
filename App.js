@@ -1,17 +1,17 @@
-import { View } from "react-native"
+import { styles } from "./src/style"
+import { SafeAreaView } from "react-native"
 import { NativeRouter, Route, Routes } from "react-router-native"
 
-import LoginContainer from "./src/components/LoginContainer";
+import WeeksContainer from "./src/components/WeeksContainer"
 
 export default function App() {
   return (
     <NativeRouter>
-      <View>
+      <SafeAreaView style={styles.app}>
         <Routes>
-          <Route exact path="/" element={<LoginContainer/>} />
-          <Route exact path="/login" element={<LoginContainer/>} />
+          <Route exact path="/" element={<WeeksContainer />} />
         </Routes>
-      </View>
+      </SafeAreaView>
     </NativeRouter>
   );
 }
