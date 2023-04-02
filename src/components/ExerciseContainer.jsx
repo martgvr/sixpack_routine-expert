@@ -1,7 +1,7 @@
 import React from "react"
+import { styles } from "../style"
 import { SafeAreaView, StatusBar } from "react-native"
 
-import { styles } from "../style"
 import Header from "./Header"
 import ExerciseCardsContainer from "./ExerciseCardsContainer"
 

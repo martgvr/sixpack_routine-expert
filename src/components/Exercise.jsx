@@ -1,17 +1,20 @@
 import React from "react"
+import { styles } from "../style"
 import { View, Text } from "react-native"
 
-import { styles } from "../style"
+import SetRow from "./SetRow"
 
-const Exercise = () => {
+const Exercise = ({ name }) => {
 	return (
 		<View style={styles.exerciseCardSetsManager}>
 			<View>
-				<Text style={styles.headerText}>Nombre del ejercicio</Text>
+				<Text style={styles.headerText}>{name}</Text>
 			</View>
 
 			<View style={styles.exerciseCardSetsContainer}>
-				<Text>Sets</Text>
+				<SetRow index={1} weight={60} reps={10}/>
+				<SetRow index={2} weight={80} reps={7}/>
+				<SetRow index={3} weight={100} reps={4}/>
 			</View>
 
 			<View>

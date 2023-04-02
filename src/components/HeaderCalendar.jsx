@@ -1,7 +1,7 @@
 import React from "react"
+import { styles } from "../style"
 import { View, Text, Image, ScrollView } from "react-native"
 
-import { styles } from "../style"
 
 const HeaderCalendar = () => {
 	return (

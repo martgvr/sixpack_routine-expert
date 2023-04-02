@@ -1,7 +1,7 @@
 import React from "react"
+import { styles } from "../style"
 import { View, Text } from "react-native"
 
-import { styles } from "../style"
 import Exercise from "./Exercise"
 
 const ExerciseCard = ({ title }) => {
@@ -11,7 +11,7 @@ const ExerciseCard = ({ title }) => {
 				<Text style={styles.exerciseMuscleName}>{title}</Text>
 			</View>
 
-            <Exercise />
+            <Exercise name={'Bench press'}/>
 		</View>
 	)
 }

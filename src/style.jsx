@@ -2,16 +2,14 @@ import { StyleSheet, Dimensions } from "react-native"
 const screenWidth = Dimensions.get('window').width
 
 const COLORS = {
+    // primary: '#4c5359',
+    // secondary: '#23282b',
+    // tertiary: '#8dc4d9',
+
     primary: '#232326',
     secondary: '#0f0f0f',
     tertiary: '#2d85dd'
 }
-
-// const COLORS = {
-//     primary: '#4c5359',
-//     secondary: '#23282b',
-//     tertiary: '#8dc4d9'
-// }
 
 export const styles = StyleSheet.create({
     // APP
@@ -54,6 +52,7 @@ export const styles = StyleSheet.create({
         width: 25,
         aspectRatio: 1
     },
+
     // CALENDAR
     headerCalendar: {
         width: '100%',
@@ -117,7 +116,7 @@ export const styles = StyleSheet.create({
     // EXERCISE CARD
     exerciseCard: {
         justifyContent: 'space-between',
-        gap: 16
+        gap: 10
     },
     exerciseMuscleName: {
         color: '#707070',
@@ -133,5 +132,39 @@ export const styles = StyleSheet.create({
     },
     exerciseCardAddSetButton: {
         color: '#f78939'
+    },
+
+    // SET ROW
+    setRow: {
+        // backgroundColor: 'red',
+        flexDirection: 'row',
+        height: 40,
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+    setRowIndex: {
+        color: '#c9c9c9',
+        fontSize: 16,
+        fontWeight: 'bold',
+        paddingHorizontal: 10,
+        paddingVertical: 4,
+        borderColor: '#4a4a4a',
+        borderWidth: 1,
+        borderRadius: 6,
+        verticalAlign: 'middle'
+    },
+    setRowWeight: {
+        color: 'white',
+        fontSize: 16,
+        // fontWeight: 'bold',
+    },
+    setRowReps: {
+        color: 'white',
+        fontSize: 16,
+        // fontWeight: 'bold',
+    },
+    setRowOptions: {
+        width: 14,
+        height: 14
     }
 })
