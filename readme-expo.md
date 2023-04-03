@@ -27,12 +27,8 @@ npm run web
 
 Al correr la versión web, también se habilita la versión mobile.
 
+# SQLite
 
-<!-- APP -->
-
-Se muestran 4 semanas (1 mes) que se van deslizando como cards, una superpuesta a la otra
-La semana activa tendrá colores distintos o incluso la fecha de hoy
-
-Al elegir una semana se va a maximizar en pantalla completa
-
-Una tecla en la parte superior de la semana permitirá elegir los músculos a entrenar cada día
+```
+npx expo install expo-sqlite
+```

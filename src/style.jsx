@@ -41,7 +41,6 @@ export const styles = StyleSheet.create({
     },
     headerButton: {
         color: COLORS.tertiary,
-        // backgroundColor: COLORS.tertiary,
         paddingVertical: 6,
         paddingHorizontal: 20,
         borderRadius: 10,
@@ -156,12 +155,10 @@ export const styles = StyleSheet.create({
     setRowWeight: {
         color: 'white',
         fontSize: 16,
-        // fontWeight: 'bold',
     },
     setRowReps: {
         color: 'white',
         fontSize: 16,
-        // fontWeight: 'bold',
     },
     setRowOptions: {
         width: 14,
