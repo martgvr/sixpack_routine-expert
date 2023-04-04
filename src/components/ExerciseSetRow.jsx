@@ -2,8 +2,7 @@ import React from "react"
 import { styles } from "../style"
 import { View, Text, Image } from "react-native"
 
-
-const SetRow = ({ index, weight, reps }) => {
+const ExerciseSetRow = ({ index, weight, reps }) => {
 	return (
 		<View style={styles.setRow}>
 			<View>
@@ -22,4 +21,4 @@ const SetRow = ({ index, weight, reps }) => {
 	)
 }
 
-export default SetRow
+export default ExerciseSetRow

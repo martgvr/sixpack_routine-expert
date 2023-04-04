@@ -17,23 +17,7 @@ export const styles = StyleSheet.create({
         width: '100%'
     },
 
-    // HEADER
-    header: {
-        backgroundColor: COLORS.primary,
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 120,
-        justifyContent: 'space-between'
-    },
-    headerRow: {
-        paddingHorizontal: 20,
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        height: 60,
-    },
+    // GENERAL HEADERS
     headerText: {
         color: 'white',
         fontSize: 16,
@@ -52,34 +36,52 @@ export const styles = StyleSheet.create({
         aspectRatio: 1
     },
 
+    // EXERCISE HEADER
+    exerciseHeader: {
+        backgroundColor: COLORS.primary,
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 120,
+        justifyContent: 'space-between'
+    },
+    exerciseHeaderRow: {
+        paddingHorizontal: 20,
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        height: 60,
+    },
+
     // CALENDAR
-    headerCalendar: {
+    exerciseHeaderCalendar: {
         width: '100%',
         height: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
     },
-    calendarDaysContainer: {
+    exerciseCalendarDaysContainer: {
         height: '100%',
         paddingHorizontal: 20
     },
-    calendarDay: {
+    exerciseCalendarDay: {
         width: 65,
         justifyContent: 'center',
         alignItems: 'center',
         gap: 4
     }, 
-    calendarDayName: {
+    exerciseCalendarDayName: {
         fontWeight: 'bold',
         color: '#9e9e9e'
     },
-    calendarDayNumber: {
+    exerciseCalendarDayNumber: {
         fontWeight: 'bold',
         color: 'white',
         fontSize: 26
     },
-    calendarDayNumberActive: {
+    exerciseCalendarDayNumberActive: {
         backgroundColor: COLORS.tertiary,
         fontWeight: 'bold',
         color: 'white',
@@ -98,6 +100,7 @@ export const styles = StyleSheet.create({
         aspectRatio: 1,
         transform: 'rotate(-90deg)'
     },
+
     // EXERCISE CONTAINER
     exerciseContainer: {
         backgroundColor: COLORS.secondary,
@@ -135,7 +138,6 @@ export const styles = StyleSheet.create({
 
     // SET ROW
     setRow: {
-        // backgroundColor: 'red',
         flexDirection: 'row',
         height: 40,
         alignItems: 'center',
@@ -164,9 +166,22 @@ export const styles = StyleSheet.create({
         width: 14,
         height: 14
     },
+    
     // RESUME CONTAINER
     resumeContainer: {
         backgroundColor: COLORS.secondary,
-        height: '100%'
+        height: '100%',
     },
+    resumeTitle: {
+        color: '#9c9c9c',
+        fontSize: 16,
+    },
+
+    // RESUME HEADER
+    resumeHeader: {
+        backgroundColor: COLORS.primary,
+        height: 60,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
 })

@@ -2,7 +2,7 @@ import React from "react"
 import { styles } from "../style"
 import { View, Text } from "react-native"
 
-import SetRow from "./SetRow"
+import ExerciseSetRow from "./ExerciseSetRow"
 
 const Exercise = ({ name }) => {
 	return (
@@ -12,9 +12,9 @@ const Exercise = ({ name }) => {
 			</View>
 
 			<View style={styles.exerciseCardSetsContainer}>
-				<SetRow index={1} weight={60} reps={10}/>
-				<SetRow index={2} weight={80} reps={7}/>
-				<SetRow index={3} weight={100} reps={4}/>
+				<ExerciseSetRow index={1} weight={60} reps={10}/>
+				<ExerciseSetRow index={2} weight={80} reps={7}/>
+				<ExerciseSetRow index={3} weight={100} reps={4}/>
 			</View>
 
 			<View>

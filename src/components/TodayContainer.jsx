@@ -3,13 +3,16 @@ import { SafeAreaView, Text, StatusBar, View } from "react-native"
 
 import { styles } from "../style"
 
-const ResumeContainer = () => {
+import TodayHeader from "./TodayHeader"
+
+const TodayContainer = () => {
 	return (
 		<SafeAreaView style={styles.resumeContainer}>
 			<StatusBar />
-			<Text>ResumeContainer</Text>
+            <TodayHeader />
+			<Text style={styles.resumeTitle}>General</Text>
 		</SafeAreaView>
 	)
 }
 
-export default ResumeContainer
+export default TodayContainer

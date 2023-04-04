@@ -6,20 +6,20 @@ import { useEffect, useState } from "react"
 import { getData } from "./src/services/database.service"
 
 import ExerciseContainer from "./src/components/ExerciseContainer"
-import ResumeContainer from "./src/components/ResumeContainer"
+import TodayContainer from "./src/components/TodayContainer"
 
 export default function App() {
   const [data, setData] = useState([])
-  
+
   useEffect(() => {
     getData()
   }, [])
-  
+
   return (
     <NativeRouter>
       <SafeAreaView style={styles.app}>
         <Routes>
-          <Route exact path="/" element={<ResumeContainer />} />
+          <Route exact path="/" element={<ExerciseContainer />} />
         </Routes>
       </SafeAreaView>
     </NativeRouter>
