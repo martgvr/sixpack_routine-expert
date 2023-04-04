@@ -163,5 +163,10 @@ export const styles = StyleSheet.create({
     setRowOptions: {
         width: 14,
         height: 14
-    }
+    },
+    // RESUME CONTAINER
+    resumeContainer: {
+        backgroundColor: COLORS.secondary,
+        height: '100%'
+    },
 })
