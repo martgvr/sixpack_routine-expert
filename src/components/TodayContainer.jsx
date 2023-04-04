@@ -1,16 +1,16 @@
 import React from "react"
-import { SafeAreaView, Text, StatusBar, View } from "react-native"
-
 import { styles } from "../style"
+import { SafeAreaView, StatusBar } from "react-native"
 
 import TodayHeader from "./TodayHeader"
+import TodayMain from "./TodayMain"
 
 const TodayContainer = () => {
 	return (
-		<SafeAreaView style={styles.resumeContainer}>
+		<SafeAreaView style={styles.todayContainer}>
 			<StatusBar />
-            <TodayHeader />
-			<Text style={styles.resumeTitle}>General</Text>
+			<TodayHeader />
+			<TodayMain />
 		</SafeAreaView>
 	)
 }

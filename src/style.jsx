@@ -167,21 +167,98 @@ export const styles = StyleSheet.create({
         height: 14
     },
     
-    // RESUME CONTAINER
-    resumeContainer: {
+    // TODAY
+    todayContainer: {
         backgroundColor: COLORS.secondary,
         height: '100%',
     },
-    resumeTitle: {
+    todayTitle: {
         color: '#9c9c9c',
         fontSize: 16,
+        marginBottom: 20
     },
-
-    // RESUME HEADER
-    resumeHeader: {
+    todayHeader: {
         backgroundColor: COLORS.primary,
         height: 60,
         justifyContent: 'center',
         alignItems: 'center'
-    }
+    },
+    todayMain: {
+        flexGrow: 1,
+        padding: 20
+    },
+
+    todaySmallCardsContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        gap: 20
+    },
+    todaySmallCard: {
+        backgroundColor: COLORS.primary,
+        flexGrow: 1,
+        aspectRatio: 1,
+        width: '30%',
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOffset: {width: -2, height: 4},
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
+        gap: 10,
+        marginBottom: 20
+    },
+    todaySmallCardTitle: {
+        color: '#9c9c9c',
+        fontSize: 12,
+        fontWeight: 'bold',
+        textTransform: 'uppercase'
+    },
+    todaySmallCardString: {
+        color: COLORS.tertiary,
+        fontSize: 26,
+        fontWeight: 'bold',
+    },
+    todaySmallCardObject: {
+        color: COLORS.tertiary,
+        fontSize: 14,
+        fontWeight: 'bold',
+    },
+
+    todayLargeCardsContainer: {
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        gap: 20
+    },
+    todayLargeCard: {
+        shadowColor: '#000',
+        shadowOffset: {width: -2, height: 4},
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
+        backgroundColor: COLORS.primary,
+        gap: 10,
+        flexGrow: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        borderRadius: 10,
+        padding: 20
+    },
+    todayLargeCardLeft: {
+        gap: 30,
+        flexDirection: 'row',
+        alignItems: 'center',
+        width: '50%'
+    },
+    todayLargeCardIcon: {
+        width: 35,
+        height: 35
+    },
+    todayLargeCardExercise: {
+        marginTop: 4,
+        color: COLORS.tertiary,
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
 })

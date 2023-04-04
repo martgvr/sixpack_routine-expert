@@ -19,7 +19,7 @@ export default function App() {
     <NativeRouter>
       <SafeAreaView style={styles.app}>
         <Routes>
-          <Route exact path="/" element={<ExerciseContainer />} />
+          <Route exact path="/" element={<TodayContainer />} />
         </Routes>
       </SafeAreaView>
     </NativeRouter>
