@@ -261,4 +261,73 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center'
     },
+
+    // CONFIG CONTAINER
+    configContainer: {
+        height: '100%'
+    },
+
+    // TOP
+    welcomeTopContainer: {
+        backgroundColor: COLORS.primary,
+        height: '50%',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingVertical: 80
+    },
+    
+    welcomeTopTexts: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 10
+    },
+
+    welcomeTopTitle: {
+        color: COLORS.tertiary,
+        fontSize: 60
+    },
+
+    welcomeTopSubtitle: {
+        color: '#ccc',
+        width: 300,
+        textAlign: 'center',
+        lineHeight: 25
+    },
+
+    welcomeTopBeginText: {
+        color: '#fff',
+        fontWeight: 'bold'
+    },
+
+    welcomeDivider: {
+        height: 80,
+        width: '100%'
+    },  
+
+    // BOTTOM
+    welcomeBottomContainer: {
+        flexGrow: 1,
+        paddingVertical: 80,
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+
+    welcomeMessageLogoImage: {
+        height: 40,
+        aspectRatio: 912/367
+    },
+    welcomeBottomFill: {
+        elevation: 3,
+        backgroundColor: COLORS.tertiary,
+        borderRadius: 10,
+        paddingVertical: 16,
+        paddingHorizontal: 26
+    },
+    welcomeBottomText: {
+        fontSize: 18,
+        color: "#fff",
+        fontWeight: "bold",
+        alignSelf: "center",
+        textTransform: "uppercase"
+    },
 })
