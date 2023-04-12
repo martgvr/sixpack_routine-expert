@@ -7,7 +7,8 @@ import { getData } from "./src/services/database.service"
 
 import ExerciseContainer from "./src/components/ExerciseContainer"
 import TodayContainer from "./src/components/TodayContainer"
-import ConfigContainer from "./src/components/ConfigContainer"
+import Welcome from "./src/components/Welcome"
+import Config from "./src/components/Config"
 
 export default function App() {
   const [data, setData] = useState([])
@@ -20,7 +21,7 @@ export default function App() {
     <NativeRouter>
       <SafeAreaView style={styles.app}>
         <Routes>
-          <Route exact path="/" element={<ConfigContainer />} />
+          <Route exact path="/" element={<Config />} />
         </Routes>
       </SafeAreaView>
     </NativeRouter>

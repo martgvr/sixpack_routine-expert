@@ -262,72 +262,148 @@ export const styles = StyleSheet.create({
         textAlign: 'center'
     },
 
-    // CONFIG CONTAINER
-    configContainer: {
+    // WELCOME CONTAINER
+    welcome: {
         height: '100%'
     },
 
-    // TOP
+    // WELCOME TOP
     welcomeTopContainer: {
         backgroundColor: COLORS.primary,
-        height: '50%',
+        height: '40%',
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingVertical: 80
     },
-    
-    welcomeTopTexts: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: 10
-    },
-
     welcomeTopTitle: {
         color: COLORS.tertiary,
         fontSize: 60
     },
-
     welcomeTopSubtitle: {
-        color: '#ccc',
+        color: '#eee',
         width: 300,
         textAlign: 'center',
         lineHeight: 25
     },
-
-    welcomeTopBeginText: {
-        color: '#fff',
-        fontWeight: 'bold'
-    },
-
     welcomeDivider: {
         height: 80,
-        width: '100%'
+        width: '100%',
+        backgroundColor: COLORS.secondary,
     },  
-
-    // BOTTOM
+    
+    // WELCOME BOTTOM
     welcomeBottomContainer: {
+        backgroundColor: COLORS.secondary,
         flexGrow: 1,
         paddingVertical: 80,
         justifyContent: 'space-between',
         alignItems: 'center'
     },
-
-    welcomeMessageLogoImage: {
-        height: 40,
-        aspectRatio: 912/367
+    welcomeTopBeginText: {
+        color: '#ddd',
+        fontWeight: 'bold',
+        marginBottom: 40,
+        textAlign: 'center'
     },
-    welcomeBottomFill: {
+    welcomeButtonFill: {
         elevation: 3,
         backgroundColor: COLORS.tertiary,
         borderRadius: 10,
         paddingVertical: 16,
         paddingHorizontal: 26
     },
-    welcomeBottomText: {
+    welcomeButtonText: {
         fontSize: 18,
         color: "#fff",
         fontWeight: "bold",
         alignSelf: "center",
         textTransform: "uppercase"
+    },
+    welcomeMessageLogoImage: {
+        height: 50,
+        aspectRatio: 912/367
+    },
+
+    // CONFIG
+    config: {
+        height: '100%'
+    },
+    configContainer: {
+        backgroundColor: COLORS.secondary,
+        flexGrow: 1,
+        justifyContent: 'space-between'
+    },
+    configHeader: {
+        backgroundColor: COLORS.primary,
+        height: 80,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    configStepsContainer: {
+        flexDirection: 'row',
+        gap: 16
+    },
+    configFirstStep: {
+        backgroundColor: COLORS.tertiary,
+        paddingHorizontal: 30,
+        paddingVertical: 6,
+        borderBottomLeftRadius: 10,
+        borderTopLeftRadius: 10,
+        borderWidth: 2,
+        borderColor: COLORS.tertiary,
+        width: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    configMiddleStep: {
+        backgroundColor: 'transparent',
+        paddingHorizontal: 30,
+        paddingVertical: 6,
+        borderColor: '#666666',
+        borderWidth: 2,
+        width: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    configLastStep: {
+        backgroundColor: 'transparent',
+        paddingHorizontal: 30,
+        paddingVertical: 6,
+        borderBottomRightRadius: 10,
+        borderTopRightRadius: 10,
+        borderWidth: 2,
+        borderColor: '#666666',
+        width: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    configStepText: {
+        color: '#666',
+        fontSize: 12,
+        fontWeight: 'bold'
+    },
+    configStepTextDone: {
+        color: '#fff',
+        fontSize: 12,
+        fontWeight: 'bold'
+    },
+    configStepDescriptionInactive: {
+        textAlign: 'center',
+        marginTop: 10,
+        color: '#aaa',
+        fontSize: 10
+    },
+    configStepDescriptionActive: {
+        textAlign: 'center',
+        marginTop: 10,
+        color: COLORS.tertiary,
+        fontSize: 10
+    },
+
+    // CONFIG DAYS FOOTER
+    configFooter: {
+        height: 80,
+        justifyContent: 'flex-start',
+        alignItems: 'center'
     },
 })
