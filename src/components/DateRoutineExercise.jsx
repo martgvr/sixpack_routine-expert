@@ -6,9 +6,9 @@ import DateRoutineSetRow from "./DateRoutineSetRow"
 
 const DateRoutineExercise = ({ name }) => {
 	return (
-		<View style={styles.exerciseCardSetsManager}>
+		<View style={styles.container}>
 			<View>
-				<Text style={styles.headerText}>{name}</Text>
+				<Text style={styles.textColor}>{name}</Text>
 			</View>
 
 			<View>
@@ -18,7 +18,7 @@ const DateRoutineExercise = ({ name }) => {
 			</View>
 
 			<View>
-				<Text style={styles.exerciseCardAddSetButton}>+ Agregar Set</Text>
+				<Text style={styles.addSetButton}>+ Agregar Set</Text>
 			</View>
 		</View>
 	)
@@ -27,19 +27,19 @@ const DateRoutineExercise = ({ name }) => {
 export default DateRoutineExercise
 
 const styles = StyleSheet.create({
-	headerText: {
-        color: 'white',
-        fontSize: 16,
-        fontWeight: 'bold'
-    },
-    exerciseCardSetsManager: {
+    container: {
         backgroundColor: COLORS.primary,
         padding: 10,
         borderRadius: 10,
         justifyContent: 'space-between',
         gap: 10
     },
-    exerciseCardAddSetButton: {
+	textColor: {
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold'
+    },
+    addSetButton: {
         color: '#f78939'
     },
 })

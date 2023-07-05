@@ -7,7 +7,7 @@ const DateRoutineCard = ({ title }) => {
 	return (
 		<View style={styles.container}>
 			<View>
-				<Text style={styles.exerciseMuscleName}>{title}</Text>
+				<Text style={styles.muscleTitle}>{title}</Text>
 			</View>
 
             <DateRoutineExercise name={'Bench press'}/>
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         gap: 10
     },
-	exerciseMuscleName: {
+	muscleTitle: {
         color: '#707070',
         fontSize: 24,
         fontWeight: 'bold'

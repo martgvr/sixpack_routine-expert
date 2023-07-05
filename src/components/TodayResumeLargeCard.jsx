@@ -4,23 +4,24 @@ import { View, Text, Image, StyleSheet } from "react-native"
 
 const TodayResumeLargeCard = ({ icon, exercise, weight, reps }) => {
 	return (
-		<View style={styles.todayLargeCard}>
-			<View style={styles.todayLargeCardLeft}>
-				<Image style={styles.todayLargeCardIcon} source={icon}/>
+		<View style={styles.container}>
+
+			<View style={styles.leftSide}>
+				<Image style={styles.icon} source={icon}/>
 				<View>
-					<Text style={styles.todaySmallCardTitle}>Ejercicio</Text>
-					<Text style={styles.todayLargeCardExercise}>{exercise}</Text>
+					<Text style={styles.title}>Ejercicio</Text>
+					<Text style={styles.exercise}>{exercise}</Text>
 				</View>
 			</View>
 
 			<View>
-				<Text style={styles.todaySmallCardTitle}>Peso</Text>
-				<Text style={styles.todayLargeCardExercise}>{weight}</Text>
+				<Text style={styles.title}>Peso</Text>
+				<Text style={styles.exercise}>{weight}</Text>
 			</View>
 			
 			<View>
-				<Text style={styles.todaySmallCardTitle}>Reps</Text>
-				<Text style={styles.todayLargeCardExercise}>{reps}</Text>
+				<Text style={styles.title}>Reps</Text>
+				<Text style={styles.exercise}>{reps}</Text>
 			</View>
 		</View>
 	)
@@ -30,9 +31,6 @@ export default TodayResumeLargeCard
 
 const styles = StyleSheet.create({
 	container: {
-
-    },
-	todayLargeCard: {
         shadowColor: '#000',
         shadowOffset: {width: -2, height: 4},
         shadowOpacity: 0.2,
@@ -46,27 +44,27 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 20
     },
-    todayLargeCardLeft: {
+    leftSide: {
         gap: 30,
         flexDirection: 'row',
         alignItems: 'center',
         width: '50%'
     },
-    todayLargeCardIcon: {
+    icon: {
         width: 35,
         height: 35
     },
-    todayLargeCardExercise: {
+    title: {
+        color: '#9c9c9c',
+        fontSize: 12,
+        fontWeight: 'bold',
+        textTransform: 'uppercase'
+    },
+    exercise: {
         marginTop: 4,
         color: COLORS.tertiary,
         fontSize: 20,
         fontWeight: 'bold',
         textAlign: 'center'
-    },
-	todaySmallCardTitle: {
-        color: '#9c9c9c',
-        fontSize: 12,
-        fontWeight: 'bold',
-        textTransform: 'uppercase'
     },
 })

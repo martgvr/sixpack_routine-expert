@@ -20,7 +20,7 @@ export default function App() {
       <SafeAreaView style={styles.container}>
         <StatusBar />
         <Routes>
-          <Route exact path="/" element={<DateRoutine />} />
+          <Route exact path="/" element={<TodayResume />} />
         </Routes>
       </SafeAreaView>
     </NativeRouter>

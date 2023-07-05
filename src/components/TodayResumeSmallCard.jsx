@@ -4,14 +4,14 @@ import { View, Text, StyleSheet } from "react-native"
 
 const TodayResumeSmallCard = ({ cardTitle, data }) => {
 	return (
-		<View style={styles.todaySmallCard}>
-			<Text style={styles.todaySmallCardTitle}>{cardTitle}</Text>
+		<View style={styles.container}>
+			<Text style={styles.title}>{cardTitle}</Text>
             <View>
                 {
                     typeof data === 'string' ?
-                    <Text style={styles.todaySmallCardString}>{data}</Text>
+                    <Text style={styles.string}>{data}</Text>
                     :
-                    data.map(item => <Text style={styles.todaySmallCardObject}>{item}</Text>)
+                    data.map(item => <Text style={styles.group}>{item}</Text>)
                 }
             </View>
 		</View>
@@ -21,10 +21,7 @@ const TodayResumeSmallCard = ({ cardTitle, data }) => {
 export default TodayResumeSmallCard
 
 const styles = StyleSheet.create({
-	container: {
-
-    },
-    todaySmallCard: {
+    container: {
         backgroundColor: COLORS.primary,
         flexGrow: 1,
         aspectRatio: 1,
@@ -39,18 +36,18 @@ const styles = StyleSheet.create({
         gap: 10,
         marginBottom: 20
     },
-    todaySmallCardTitle: {
+    title: {
         color: '#9c9c9c',
         fontSize: 12,
         fontWeight: 'bold',
         textTransform: 'uppercase'
     },
-    todaySmallCardString: {
+    string: {
         color: COLORS.tertiary,
         fontSize: 26,
         fontWeight: 'bold',
     },
-    todaySmallCardObject: {
+    group: {
         color: COLORS.tertiary,
         fontSize: 14,
         fontWeight: 'bold',

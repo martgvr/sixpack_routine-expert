@@ -10,10 +10,10 @@ const RoutineConfigSteps = ({ step }) => {
 		<View style={styles.container}>
             {
                 step === '1' && 
-                <View style={styles.configStepContainer}>
+                <View style={styles.stepContainer}>
                     <View>
-                        <Text style={styles.configStepTitle}>Selección de días</Text>
-                        <Text style={styles.configStepSubtitle}>Seleccione los días de la semana que desea entrenar.</Text>
+                        <Text style={styles.stepTitle}>Selección de días</Text>
+                        <Text style={styles.stepSubtitle}>Seleccione los días de la semana que desea entrenar.</Text>
                     </View>
                     <View style={styles.checkboxContainer}>
                         <BouncyCheckbox text="Lunes" textStyle={{ color: '#ddd', fontSize: 25 }} size={35} fillColor={COLORS.tertiary} unfillColor="#FFFFFF" iconStyle={{ borderColor: "red" }} innerIconStyle={{ borderWidth: 2 }} onPress={(isChecked) => setSelection(isChecked)} />
@@ -29,15 +29,15 @@ const RoutineConfigSteps = ({ step }) => {
             {
                 step === '2' && 
                 <View>
-                    <Text style={styles.configStepTitle}>Selección de músculos</Text>
-                    <Text style={styles.configStepSubtitle}>Seleccione los músculos que entrenará cada día.</Text>
+                    <Text style={styles.stepTitle}>Selección de músculos</Text>
+                    <Text style={styles.stepSubtitle}>Seleccione los músculos que entrenará cada día.</Text>
                 </View>
             }
             {
                 step === '3' && 
                 <View>
-                    <Text style={styles.configStepTitle}>Selección de ejercicios</Text>
-                    <Text style={styles.configStepSubtitle}>Seleccione los ejercicios que entrenará por grupo muscular.</Text>
+                    <Text style={styles.stepTitle}>Selección de ejercicios</Text>
+                    <Text style={styles.stepSubtitle}>Seleccione los ejercicios que entrenará por grupo muscular.</Text>
                 </View>
             }
 		</View>
@@ -51,15 +51,15 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         paddingVertical: 40
     },
-    configStepContainer: {
+    stepContainer: {
         flexGrow: 1
     },
-    configStepTitle: {
+    stepTitle: {
         color: COLORS.tertiary,
         fontSize: 40,
         textAlign: 'center'
     },
-    configStepSubtitle: {
+    stepSubtitle: {
         marginTop: 10,
         color: '#ddd',
         fontSize: 20,

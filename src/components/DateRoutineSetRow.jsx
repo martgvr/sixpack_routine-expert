@@ -4,18 +4,18 @@ import { View, Text, Image, StyleSheet } from "react-native"
 
 const DateRoutineSetRow = ({ index, weight, reps }) => {
 	return (
-		<View style={styles.setRow}>
+		<View style={styles.container}>
 			<View>
-				<Text style={styles.setRowIndex}>{index}</Text>
+				<Text style={styles.rowIndex}>{index}</Text>
 			</View>
 			<View>
-				<Text style={styles.setRowWeight}>{weight} kg</Text>
+				<Text style={styles.rowWeight}>{weight} kg</Text>
 			</View>
 			<View>
-				<Text style={styles.setRowReps}>{reps} reps</Text>
+				<Text style={styles.rowReps}>{reps} reps</Text>
 			</View>
 			<View>
-				<Image style={styles.setRowOptions} source={require('../../assets/options.png')}/>
+				<Image style={styles.rowOptions} source={require('../../assets/options.png')}/>
 			</View>
 		</View>
 	)
@@ -25,15 +25,12 @@ export default DateRoutineSetRow
 
 const styles = StyleSheet.create({
 	container: {
-
-    },
-	setRow: {
         flexDirection: 'row',
         height: 40,
         alignItems: 'center',
         justifyContent: 'space-between'
     },
-    setRowIndex: {
+    rowIndex: {
         color: '#c9c9c9',
         fontSize: 16,
         fontWeight: 'bold',
@@ -44,15 +41,15 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         verticalAlign: 'middle'
     },
-    setRowWeight: {
+    rowWeight: {
         color: 'white',
         fontSize: 16,
     },
-    setRowReps: {
+    rowReps: {
         color: 'white',
         fontSize: 16,
     },
-    setRowOptions: {
+    rowOptions: {
         width: 14,
         height: 14
     },

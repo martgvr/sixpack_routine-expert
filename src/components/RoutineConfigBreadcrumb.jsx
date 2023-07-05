@@ -10,24 +10,24 @@ const RoutineConfigBreadcrumb = ({ step }) => {
 	return (
 		<View style={styles.container}>
 			<View>
-				<View style={styles.configFirstStep}>
-					<Text style={styles.configStepTextDone}>1</Text>
+				<View style={styles.firstStep}>
+					<Text style={styles.stepTextDone}>1</Text>
 				</View>
-				<Text style={styles.configStepDescriptionActive}>Selección de días</Text>
+				<Text style={styles.stepDescriptionActive}>Selección de días</Text>
 			</View>
 
 			<View>
-				<View style={[styles.configMiddleStep, step >= "2" && activeStepBadge]}>
-					<Text style={[styles.configStepText, step >= "2" && activeStepText]}>2</Text>
+				<View style={[styles.middleStep, step >= "2" && activeStepBadge]}>
+					<Text style={[styles.stepText, step >= "2" && activeStepText]}>2</Text>
 				</View>
-				<Text style={[styles.configStepDescriptionInactive, step >= "2" && activeStepDesc]}>Selección de músculos</Text>
+				<Text style={[styles.stepDescriptionInactive, step >= "2" && activeStepDesc]}>Selección de músculos</Text>
 			</View>
 
 			<View>
-				<View style={[styles.configLastStep, step == "3" && activeStepBadge]}>
-					<Text style={[styles.configStepText, step == "3" && activeStepText]}>3</Text>
+				<View style={[styles.lastStep, step == "3" && activeStepBadge]}>
+					<Text style={[styles.stepText, step == "3" && activeStepText]}>3</Text>
 				</View>
-				<Text style={[styles.configStepDescriptionInactive, step == "3" && activeStepDesc]}>Selección de ejercicios</Text>
+				<Text style={[styles.stepDescriptionInactive, step == "3" && activeStepDesc]}>Selección de ejercicios</Text>
 			</View>
 		</View>
 	)
@@ -40,8 +40,7 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		gap: 16,
 	},
-
-	configFirstStep: {
+	firstStep: {
 		backgroundColor: COLORS.tertiary,
 		paddingHorizontal: 30,
 		paddingVertical: 6,
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 	},
-	configMiddleStep: {
+	middleStep: {
 		backgroundColor: "transparent",
 		paddingHorizontal: 30,
 		paddingVertical: 6,
@@ -63,7 +62,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 	},
-	configLastStep: {
+	lastStep: {
 		backgroundColor: "transparent",
 		paddingHorizontal: 30,
 		paddingVertical: 6,
@@ -76,23 +75,23 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 	},
 
-	configStepText: {
+	stepText: {
 		color: "#666",
 		fontSize: 12,
 		fontWeight: "bold",
 	},
-	configStepTextDone: {
+	stepTextDone: {
 		color: "#fff",
 		fontSize: 12,
 		fontWeight: "bold",
 	},
-	configStepDescriptionInactive: {
+	stepDescriptionInactive: {
 		textAlign: "center",
 		marginTop: 6,
 		color: "#aaa",
 		fontSize: 11,
 	},
-	configStepDescriptionActive: {
+	stepDescriptionActive: {
 		textAlign: "center",
 		marginTop: 6,
 		color: COLORS.tertiary,

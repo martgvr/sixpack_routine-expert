@@ -7,13 +7,13 @@ import DateRoutineHeaderCalendar from "./DateRoutineHeaderCalendar"
 const DateRoutineHeader = () => {
 	return (
 		<View style={styles.container}>
-			<View style={styles.exerciseHeaderRow}>
-				<Image source={{ uri: "https://icon-library.com/images/calendar-icon-white-png/calendar-icon-white-png-18.jpg" }} style={styles.headerIcon} />
-				<Text style={styles.headerText}>Fecha seleccionada</Text>
-				<Text style={styles.headerButton}>Hoy</Text>
+			<View style={styles.row}>
+				<Image source={{ uri: "https://icon-library.com/images/calendar-icon-white-png/calendar-icon-white-png-18.jpg" }} style={styles.icon} />
+				<Text style={styles.text}>Fecha seleccionada</Text>
+				<Text style={styles.button}>Hoy</Text>
 			</View>
 
-			<View style={styles.exerciseHeaderRow}>
+			<View style={styles.row}>
 				<DateRoutineHeaderCalendar />
 			</View>
 		</View>
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         height: 120,
         justifyContent: 'space-between'
     },
-    exerciseHeaderRow: {
+    row: {
         paddingHorizontal: 20,
         width: '100%',
         justifyContent: 'center',
@@ -39,12 +39,12 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         height: 60,
     },
-	headerText: {
+	text: {
         color: 'white',
         fontSize: 16,
         fontWeight: 'bold'
     },
-    headerButton: {
+    button: {
         color: COLORS.tertiary,
         paddingVertical: 6,
         paddingHorizontal: 20,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold'
     },
-	headerIcon: {
+	icon: {
         width: 25,
         aspectRatio: 1
     },
