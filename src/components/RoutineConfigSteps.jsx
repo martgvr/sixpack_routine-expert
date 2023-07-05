@@ -9,7 +9,7 @@ const RoutineConfigSteps = ({ step }) => {
 	return (
 		<View style={styles.container}>
             {
-                step === '1' && 
+                step === 1 && 
                 <View style={styles.stepContainer}>
                     <View>
                         <Text style={styles.stepTitle}>Selección de días</Text>
@@ -27,14 +27,14 @@ const RoutineConfigSteps = ({ step }) => {
                 </View>
             }
             {
-                step === '2' && 
+                step === 2 && 
                 <View>
                     <Text style={styles.stepTitle}>Selección de músculos</Text>
                     <Text style={styles.stepSubtitle}>Seleccione los músculos que entrenará cada día.</Text>
                 </View>
             }
             {
-                step === '3' && 
+                step === 3 && 
                 <View>
                     <Text style={styles.stepTitle}>Selección de ejercicios</Text>
                     <Text style={styles.stepSubtitle}>Seleccione los ejercicios que entrenará por grupo muscular.</Text>

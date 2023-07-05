@@ -1,12 +1,15 @@
 import React, { useState } from "react"
 import { COLORS } from "../global/colors"
+import { Link } from "react-router-native"
 import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet } from "react-native"
 
 import RoutineConfigSteps from "../components/RoutineConfigSteps"
 import RoutineConfigBreadcrumb from "../components/RoutineConfigBreadcrumb"
 
 const RoutineConfig = () => {
-	const [currentStep, setCurrentStep] = useState("1")
+	const [currentStep, setCurrentStep] = useState(1)
+
+	const continuePressHandler = () => setCurrentStep(currentStep + 1)
 
 	return (
 		<SafeAreaView style={styles.container}>
@@ -19,9 +22,16 @@ const RoutineConfig = () => {
 			</View>
 
 			<View style={styles.footer}>
-				<TouchableOpacity style={styles.buttonFill}>
-					<Text style={styles.buttonText}>Continuar</Text>
-				</TouchableOpacity>
+				{
+					currentStep < 3 ?
+					<TouchableOpacity style={styles.buttonFill} onPress={continuePressHandler} >
+						<Text style={styles.buttonText}>Continuar</Text>
+					</TouchableOpacity>
+					:
+					<Link to="/todayresume" style={styles.buttonFill}>
+						<Text style={styles.buttonText}>Finalizar</Text>
+					</Link>
+				}
 			</View>
 		</SafeAreaView>
 	)

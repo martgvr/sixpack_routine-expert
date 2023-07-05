@@ -1,7 +1,8 @@
 import React from "react"
 import { COLORS } from "../global/colors"
+import { Link } from "react-router-native"
 import Svg, { Path } from "react-native-svg"
-import { View, Text, SafeAreaView, Image, TouchableOpacity, StyleSheet } from "react-native"
+import { View, Text, SafeAreaView, Image, StyleSheet } from "react-native"
 
 const Welcome = () => {
 	return (
@@ -24,9 +25,9 @@ const Welcome = () => {
 				<View>
 					<Text style={styles.bottomContainerText}>Haga click en comenzar para iniciar el asistente</Text>
 
-					<TouchableOpacity style={styles.bottomContainerButtonFill}>
-						<Text style={styles.bottomContainerButtonText}>Comenzar</Text>
-					</TouchableOpacity>
+					<Link to="/routineconfig" style={styles.bottomContainerButtonFill}>
+                        <Text style={styles.bottomContainerButtonText}>Comenzar</Text>
+                    </Link>
 				</View>
 
 				<View>
@@ -40,65 +41,66 @@ const Welcome = () => {
 export default Welcome
 
 const styles = StyleSheet.create({
-    // CONTAINER
+	// CONTAINER
 	container: {
 		height: "100%",
 	},
 
-    // TOP
-    topContainer: {
-        backgroundColor: COLORS.primary,
-        height: '40%',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingVertical: 80
-    },
-    topContainerTitle: {
-        color: COLORS.tertiary,
-        fontSize: 60
-    },
-    topContainerSubtitle: {
-        color: '#eee',
-        width: 300,
-        textAlign: 'center',
-        lineHeight: 25
-    },
-    wavesDivider: {
-        height: 80,
-        width: '100%',
-        backgroundColor: COLORS.secondary,
-    },  
-    
-    // BOTTOM
-    bottomContainer: {
-        backgroundColor: COLORS.secondary,
-        flexGrow: 1,
-        paddingVertical: 80,
-        justifyContent: 'space-between',
-        alignItems: 'center'
-    },
-    bottomContainerText: {
-        color: '#ddd',
-        fontWeight: 'bold',
-        marginBottom: 40,
-        textAlign: 'center'
-    },
-    bottomContainerButtonFill: {
-        elevation: 3,
-        backgroundColor: COLORS.tertiary,
-        borderRadius: 10,
-        paddingVertical: 16,
-        paddingHorizontal: 26
-    },
-    bottomContainerButtonText: {
+	// TOP
+	topContainer: {
+		backgroundColor: COLORS.primary,
+		height: "40%",
+		justifyContent: "space-between",
+		alignItems: "center",
+		paddingVertical: 80,
+	},
+	topContainerTitle: {
+		color: COLORS.tertiary,
+		fontSize: 60,
+	},
+	topContainerSubtitle: {
+		color: "#eee",
+		width: 300,
+		textAlign: "center",
+		lineHeight: 25,
+	},
+	wavesDivider: {
+		height: 80,
+		width: "100%",
+		backgroundColor: COLORS.secondary,
+	},
+
+	// BOTTOM
+	bottomContainer: {
+		backgroundColor: COLORS.secondary,
+		flexGrow: 1,
+		paddingVertical: 80,
+		justifyContent: "space-between",
+		alignItems: "center",
+	},
+	bottomContainerText: {
+		color: "#ddd",
+		fontWeight: "bold",
+		marginBottom: 40,
+		textAlign: "center",
+	},
+	bottomContainerButtonFill: {
+		elevation: 3,
+		backgroundColor: COLORS.tertiary,
+		borderRadius: 10,
+		paddingVertical: 16,
+		paddingHorizontal: 26,
+	},
+	bottomContainerButtonText: {
         fontSize: 18,
-        color: "#fff",
-        fontWeight: "bold",
-        alignSelf: "center",
-        textTransform: "uppercase"
-    },
-    bottomContainerLogoImage: {
-        height: 50,
-        aspectRatio: 912/367
-    },
+		color: "#fff",
+		fontWeight: "bold",
+		alignSelf: "center",
+		textTransform: "uppercase",
+	},
+	bottomContainerLogoImage: {
+        marginTop: 90,
+		height: 50,
+		aspectRatio: 912 / 367,
+	},
 })
