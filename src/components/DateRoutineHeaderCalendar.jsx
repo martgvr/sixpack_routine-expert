@@ -1,10 +1,10 @@
 import React from "react"
-import { styles } from "../style"
-import { View, Text, Image, ScrollView } from "react-native"
+import { COLORS } from "../global/colors"
+import { View, Text, Image, ScrollView, StyleSheet } from "react-native"
 
-const ExerciseHeaderCalendar = () => {
+const DateRoutineHeaderCalendar = () => {
 	return (
-		<View style={styles.exerciseHeaderCalendar}>
+		<View style={styles.container}>
 			<Image source={{ uri: "https://www.pngkit.com/png/full/50-508417_blue-arrow-down-png-download-white-arrow-down.png" }} style={styles.headerArrowLeft} />
 
 			<ScrollView horizontal={true} style={styles.exerciseCalendarDaysContainer}>
@@ -39,4 +39,52 @@ const ExerciseHeaderCalendar = () => {
 	)
 }
 
-export default ExerciseHeaderCalendar
+export default DateRoutineHeaderCalendar
+
+const styles = StyleSheet.create({
+	container: {
+        width: '100%',
+        height: '100%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    exerciseCalendarDaysContainer: {
+        height: '100%',
+        paddingHorizontal: 20
+    },
+    exerciseCalendarDay: {
+        width: 65,
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 4
+    }, 
+    exerciseCalendarDayName: {
+        fontWeight: 'bold',
+        color: '#9e9e9e'
+    },
+    exerciseCalendarDayNumber: {
+        fontWeight: 'bold',
+        color: 'white',
+        fontSize: 26
+    },
+    exerciseCalendarDayNumberActive: {
+        backgroundColor: COLORS.tertiary,
+        fontWeight: 'bold',
+        color: 'white',
+        fontSize: 26,
+        width: 30,
+        textAlign: 'center',
+        borderRadius: 10
+    },
+    headerArrowLeft: {
+        width: 12,
+        aspectRatio: 1,
+        transform: 'rotate(90deg)'
+    },
+    headerArrowRight: {
+        width: 12,
+        aspectRatio: 1,
+        transform: 'rotate(-90deg)'
+    },
+})

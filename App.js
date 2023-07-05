@@ -1,16 +1,11 @@
-// import { styles } from "./src/style"
-import { SafeAreaView, StyleSheet, StatusBar } from "react-native"
-import { NativeRouter, Route, Routes } from "react-router-native"
-
 import { useEffect, useState } from "react"
 import { getData } from "./src/services/database.service"
-
-// import ExerciseContainer from "./src/components/ExerciseContainer"
-// import TodayContainer from "./src/components/TodayContainer"
-// import Config from "./src/components/Config"
-// import Welcome from "./src/components/Welcome"
+import { NativeRouter, Route, Routes } from "react-router-native"
+import { SafeAreaView, StyleSheet, StatusBar } from "react-native"
 
 import Welcome from "./src/screens/Welcome"
+import DateRoutine from "./src/screens/DateRoutine"
+import TodayResume from "./src/screens/TodayResume"
 import RoutineConfig from "./src/screens/RoutineConfig"
 
 export default function App() {
@@ -25,7 +20,7 @@ export default function App() {
       <SafeAreaView style={styles.container}>
         <StatusBar />
         <Routes>
-          <Route exact path="/" element={<RoutineConfig />} />
+          <Route exact path="/" element={<DateRoutine />} />
         </Routes>
       </SafeAreaView>
     </NativeRouter>

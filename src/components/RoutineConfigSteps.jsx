@@ -1,13 +1,13 @@
-import { styles, COLORS } from "../style"
 import React, { useState } from 'react'
-import { View, Text } from "react-native"
+import { COLORS } from '../global/colors'
+import { View, Text, StyleSheet } from "react-native"
 import BouncyCheckbox from "react-native-bouncy-checkbox"
 
-const ConfigStep = ({ step }) => {
+const RoutineConfigSteps = ({ step }) => {
     const [isSelected, setSelection] = useState(false)
 
 	return (
-		<View style={styles.configStep}>
+		<View style={styles.container}>
             {
                 step === '1' && 
                 <View style={styles.configStepContainer}>
@@ -44,4 +44,33 @@ const ConfigStep = ({ step }) => {
 	)
 }
 
-export default ConfigStep
+export default RoutineConfigSteps
+
+const styles = StyleSheet.create({
+	container: {
+        flexGrow: 1,
+        paddingVertical: 40
+    },
+    configStepContainer: {
+        flexGrow: 1
+    },
+    configStepTitle: {
+        color: COLORS.tertiary,
+        fontSize: 40,
+        textAlign: 'center'
+    },
+    configStepSubtitle: {
+        marginTop: 10,
+        color: '#ddd',
+        fontSize: 20,
+        alignSelf: 'center',
+        textAlign: 'center',
+        width: '80%',
+    },
+    checkboxContainer: {
+        flexGrow: 1,
+        justifyContent: 'center',
+        paddingHorizontal: 40,
+        gap: 20
+    },  
+})

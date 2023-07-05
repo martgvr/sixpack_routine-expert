@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import { COLORS } from "../global/colors"
 import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet } from "react-native"
 
-import ConfigStep from "../components/ConfigStep"
-import ConfigBreadcrumb from "../components/ConfigBreadcrumb"
+import RoutineConfigSteps from "../components/RoutineConfigSteps"
+import RoutineConfigBreadcrumb from "../components/RoutineConfigBreadcrumb"
 
 const RoutineConfig = () => {
 	const [currentStep, setCurrentStep] = useState("1")
@@ -11,11 +11,11 @@ const RoutineConfig = () => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<View style={styles.header}>
-				<ConfigBreadcrumb step={currentStep} />
+				<RoutineConfigBreadcrumb step={currentStep} />
 			</View>
 
 			<View style={styles.content}>
-				<ConfigStep step={currentStep} />
+				<RoutineConfigSteps step={currentStep} />
 			</View>
 
 			<View style={styles.footer}>
