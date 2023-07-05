@@ -2,11 +2,11 @@ import React from "react"
 import { styles } from "../style"
 import { View, Text } from "react-native"
 
-const activeStepBadge = { backgroundColor: '#2d85dd', borderColor: '#2d85dd' }
 const activeStepText = { color: '#fff' }
 const activeStepDescription = { color: '#2d85dd' }
+const activeStepBadge = { backgroundColor: '#2d85dd', borderColor: '#2d85dd' }
 
-const ConfigSteps = ({ step }) => {
+const ConfigBreadcrumb = ({ step }) => {
 	return (
 		<View style={styles.configStepsContainer}>
             <View>
@@ -27,10 +27,10 @@ const ConfigSteps = ({ step }) => {
                 <View style={[styles.configLastStep, step == '3' && activeStepBadge]}>
                     <Text style={[styles.configStepText, step == '3' && activeStepText]}>3</Text>
                 </View>
-                <Text style={[styles.configStepDescriptionInactive, step == '3' && activeStepDescription]}>Resumen</Text>
+                <Text style={[styles.configStepDescriptionInactive, step == '3' && activeStepDescription]}>Selección de ejercicios</Text>
             </View>
 		</View>
 	)
 }
 
-export default ConfigSteps
+export default ConfigBreadcrumb

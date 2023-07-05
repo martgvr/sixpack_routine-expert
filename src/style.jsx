@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions } from "react-native"
 const screenWidth = Dimensions.get('window').width
 
-const COLORS = {
+export const COLORS = {
     // primary: '#4c5359',
     // secondary: '#23282b',
     // tertiary: '#8dc4d9',
@@ -330,8 +330,8 @@ export const styles = StyleSheet.create({
     },
     configContainer: {
         backgroundColor: COLORS.secondary,
+        justifyContent: 'space-between',
         flexGrow: 1,
-        justifyContent: 'space-between'
     },
     configHeader: {
         backgroundColor: COLORS.primary,
@@ -389,15 +389,15 @@ export const styles = StyleSheet.create({
     },
     configStepDescriptionInactive: {
         textAlign: 'center',
-        marginTop: 10,
+        marginTop: 6,
         color: '#aaa',
-        fontSize: 10
+        fontSize: 11
     },
     configStepDescriptionActive: {
         textAlign: 'center',
-        marginTop: 10,
+        marginTop: 6,
         color: COLORS.tertiary,
-        fontSize: 10
+        fontSize: 11
     },
 
     // CONFIG DAYS FOOTER
@@ -406,4 +406,37 @@ export const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center'
     },
+
+    // CONFIG CONTENT
+    configContent: {
+        flexGrow: 1
+    },
+
+    // CONFIG STEP
+    configStep: {
+        flexGrow: 1,
+        paddingVertical: 40
+    },
+    configStepContainer: {
+        flexGrow: 1
+    },
+    configStepTitle: {
+        color: COLORS.tertiary,
+        fontSize: 40,
+        textAlign: 'center'
+    },
+    configStepSubtitle: {
+        marginTop: 10,
+        color: '#ddd',
+        fontSize: 20,
+        alignSelf: 'center',
+        textAlign: 'center',
+        width: '80%',
+    },
+    checkboxContainer: {
+        flexGrow: 1,
+        justifyContent: 'center',
+        paddingHorizontal: 40,
+        gap: 20
+    },  
 })
